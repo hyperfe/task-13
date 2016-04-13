@@ -23,19 +23,16 @@
   获取aqi-input输入的值，并显示在aqi-display中
   */
   var btn=document.getElementById("button"); 
-  btn.onclick = function(e){
-	   var theValue=document.getElementById("aqi-input");
+  function btnclick(){
+	   var theInput=document.getElementById("aqi-input");
        var theDisplay=document.getElementById("aqi-display");
-	   if(theValue.value.length>0){
-		   theDisplay.childNodes[0].nodeValue=theValue.value;//获取span元素的文本的nodeValue属性，将input元素的value赋给它.
+	   if(theInput.value.length>0){
+		   theDisplay.childNodes[0].nodeValue=theInput.value;//获取span元素的文本的nodeValue属性，将input元素的value赋给它.
 		   }else{
 			   theDisplay.childNodes[0].nodeValue="请输入值！"
-			   }
-     
-	 
+		   }
 	 };
-
-  
+  btn.onclick=btnclick;
 })();
 
 
